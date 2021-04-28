@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         moti();
     }
-    /** YEAH 123213123123123 */
+    /** YEAH 1232131231231asdasd23 */
     public void feel(View view) {
         Intent intent = new Intent(this, AddMood.class);
         startActivity(intent);
