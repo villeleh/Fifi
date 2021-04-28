@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         moti();
     }
-    /** YEA */
+    /** YEAH 123213123123123 */
     public void feel(View view) {
         Intent intent = new Intent(this, AddMood.class);
         startActivity(intent);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void moti(){
         int nxt = rng.nextInt(MotivationText.getInstance().getLenght());
-        String motiString = MotivationText.getInstance().getList().get(nxt);;
+        String motiString = MotivationText.getInstance().getList().get(nxt);
         ((TextView) findViewById(R.id.motiView)).setText(motiString);
     }
 }
