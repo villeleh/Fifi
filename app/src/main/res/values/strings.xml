@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">FiFi</string>
+    <string name="AddButton">Kirjaa fiilis</string>
+    <string name="ListButton">Historia</string>
+    <string name="SaveButton">Tallenna</string>
+    <string name="NoteField">Kirjoita fiilis...</string>
+    <string name="Text2">Millainen päiväsi on ollut?</string>
+    <string name="Radio1">1</string>
+    <string name="Radio2">2</string>
+    <string name="Radio3">3</string>
+    <string name="Radio4">4</string>
+    <string name="Radio5">5</string>
+    <string name="SleepText">Kuinka monta tuntia nukuit?</string>
+    <string name="TopText">Miten menee :)</string>
+    <string name="Check1">Tein kotitöitä</string>
+    <string name="Check2">Ulkoilin</string>
+    <string name="Check3">Kuntoilin</string>
+    <string name="HeaderText">FiFi</string>
+    <string name="todo">logo placeholder</string>
+    <string name="description">description</string>
+    <string name="feelText">rating</string>
+    <string name="dateText">Date</string>
+    <string name="SleepHeader">Unta viime yönä:</string>
+    <string name="FeelHeader">Päivän fiilis:</string>
+    <string name="SleepText2">x hours</string>
+    <string name="outText">text</string>
+    <string name="exerText">text</string>
+    <string name="choreText">text</string>
+    <string name="motiText">moti</string>
+    <string name="todayText">Tänään:</string>
+    <string name="sleepFieldHint">h</string>
+</resources>

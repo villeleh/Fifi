@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fadeScrollbars="false">
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="345dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/quicksand"
+        android:scrollbars="vertical"
+        android:text="@string/description"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/feelText"
+        android:textSize="20sp"
+        android:textColor="#343333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descText" />
+
+    <TextView
+        android:id="@+id/sleepHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/FeelHeader"
+        android:textSize="20sp"
+        android:textColor="#343333"
+        app:layout_constraintBaseline_toBaselineOf="@+id/feelText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sleepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/SleepText2"
+        android:textSize="20sp"
+        android:textColor="#343333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feelText" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/dateText"
+        android:textColor="#FC6E51"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feelHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/SleepHeader"
+        android:textSize="20sp"
+        android:textColor="#343333"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sleepText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/outView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/outText"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/exerView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayView" />
+
+    <TextView
+        android:id="@+id/exerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/exerText"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/outView"
+        app:layout_constraintEnd_toStartOf="@+id/choreView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outView" />
+
+    <TextView
+        android:id="@+id/choreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/choreText"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/exerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/exerView" />
+
+    <TextView
+        android:id="@+id/todayView"
+        android:layout_width="81dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/todayText"
+        android:textColor="#FC6E51"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feelHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

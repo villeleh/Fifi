@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCE54">
+
+    <EditText
+        android:id="@+id/NoteField"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:background="@drawable/round_rect_shape"
+        android:ems="10"
+        android:fontFamily="@font/quicksand"
+        android:hint="@string/NoteField"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#343333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="128dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingHorizontal="14dp"
+        android:text="@string/SaveButton"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/TopText"
+        android:textSize="18sp"
+        android:textColor="#343333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/Text2"
+        android:textSize="18sp"
+        android:textColor="#343333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoteField" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SleepText"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="18sp"
+        android:textColor="#343333"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sleepField"
+        app:layout_constraintEnd_toStartOf="@+id/sleepField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="265dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FC6E51"
+            android:textSize="16sp"
+            android:textColor="#343333"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/Radio1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FC6E51"
+            android:textSize="16sp"
+            android:textColor="#343333"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/Radio2" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FC6E51"
+            android:textSize="16sp"
+            android:textColor="#343333"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/Radio3" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FC6E51"
+            android:textSize="16sp"
+            android:textColor="#343333"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/Radio4" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FC6E51"
+            android:textSize="16sp"
+            android:textColor="#343333"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/Radio5" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FC6E51"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/Check1"
+        android:textSize="16sp"
+        android:textColor="#343333"
+        android:fontFamily="@font/quicksand_bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:buttonTint="#FC6E51"
+        android:checked="false"
+        android:fontFamily="@font/quicksand_bold"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/Check2"
+        android:textColor="#343333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepField" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FC6E51"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/Check3"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="16sp"
+        android:textColor="#343333"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox1"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBox1" />
+
+    <EditText
+        android:id="@+id/sleepField"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="5"
+        android:inputType="time"
+        android:hint="@string/sleepFieldHint"
+        android:textDirection="locale"
+        android:textAlignment="viewStart"
+        app:backgroundTint="#FC6E51"
+        android:textColor="#343333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
