@@ -6,7 +6,7 @@ import android.widget.TextView;
 import android.annotation.SuppressLint;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/** Class for the activity that opens when a list item is clicked */
 public class ExpandList extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     @Override
@@ -16,8 +16,8 @@ public class ExpandList extends AppCompatActivity {
         setContentView(R.layout.obj_desc);
 
         Bundle b = getIntent().getExtras();
-        int i = b.getInt(MoodList.EXTRA, 0);
-
+        int i = b.getInt(MoodList.EXTRA, 0); // get the index of the list item that was clicked
+        // put text into text fields
         ((TextView) findViewById(R.id.descText)).setText(Singleton.getInstance().getList().get(i).getNote());
         ((TextView) findViewById(R.id.feelText)).setText(Integer.toString(Singleton.getInstance().getList().get(i).getMood()) + "/5");
         ((TextView) findViewById(R.id.sleepText)).setText(Singleton.getInstance().getList().get(i).getSleep() + " h");
@@ -25,8 +25,6 @@ public class ExpandList extends AppCompatActivity {
         ((TextView) findViewById(R.id.outView)).setText(Singleton.getInstance().getList().get(i).getUlkoilu());
         ((TextView) findViewById(R.id.exerView)).setText(Singleton.getInstance().getList().get(i).getKuntoilu());
         ((TextView) findViewById(R.id.choreView)).setText(Singleton.getInstance().getList().get(i).getKoti());
-
         ((TextView) findViewById(R.id.descText)).setMovementMethod(new ScrollingMovementMethod());
-
     }
 }

@@ -17,7 +17,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
-
+/** Class to handle ListView */
 public class MoodList extends AppCompatActivity {
 
     public static final String EXTRA = "com.example.testing123.MESSAGE";
@@ -28,18 +28,18 @@ public class MoodList extends AppCompatActivity {
         setContentView(R.layout.mood_list);
 
 
-        SharedPreferences getPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        SharedPreferences getPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creating a variable for loading data from shared preferences
         Gson gson = new Gson();
-        String json = getPrefs.getString("epic list", null);
+        String json = getPrefs.getString("epic list", null); // get string from shared preferences
         Type type = new TypeToken<ArrayList<FeelObj>>() {}.getType();
-        ArrayList<FeelObj> dataList = gson.fromJson(json, type);
-        if (dataList != null){
+        ArrayList<FeelObj> dataList = gson.fromJson(json, type); // load list and make it into a new list
+        if (dataList != null){ // if there is something on the list, reverse it and copy it to the original singleton list
             Collections.reverse(dataList);
-            Singleton.getInstance().idk(dataList);
+            Singleton.getInstance().cloneList(dataList);
         }
 
         ListView histList = findViewById(R.id.HistList);
-        ArrayAdapter<FeelObj> adapter1;
+        ArrayAdapter<FeelObj> adapter1; // make an adapter to show the list
         adapter1 = new ArrayAdapter<FeelObj>(this, android.R.layout.simple_list_item_1, Singleton.getInstance().getList());
         histList.setAdapter(adapter1);
 
@@ -47,8 +47,8 @@ public class MoodList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent nextActivity = new Intent(MoodList.this, ExpandList.class);
-                nextActivity.putExtra(EXTRA, i);
-                startActivity(nextActivity);
+                nextActivity.putExtra(EXTRA, i); // send the index of the list item that was clicked
+                startActivity(nextActivity); // start ExpandList activity
             }
         });
     }

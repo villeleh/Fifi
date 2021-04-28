@@ -4,15 +4,18 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/** Object that holds the information given in the AddMood class  */
 public class FeelObj {
     String note, sleep, ulkoilu, kuntoilu, koti;
     int rateMood;
     boolean out, exercise, chores;
+    int minute = Calendar.getInstance().get(Calendar.MINUTE);
+    String minuteString;
     String currentTime = Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))
             + "." + Integer.toString((Calendar.getInstance().get(Calendar.MONTH) + 1))
             + "." + Integer.toString(Calendar.getInstance().get(Calendar.YEAR))
             + " " + Integer.toString(Calendar.getInstance().get(Calendar.HOUR_OF_DAY))
-            + ":" + Integer.toString(Calendar.getInstance().get(Calendar.MINUTE));
+            + ":" + getMinute();
 
     public FeelObj(String note, int rateMood, String sleep, boolean out, boolean exercise, boolean chores){
         this.note = note;
@@ -21,6 +24,13 @@ public class FeelObj {
         this.out = out;
         this.exercise = exercise;
         this.chores = chores;
+    }
+
+    public String getMinute(){ // adds a "0" in front of the minute if there isnt one
+        if (minute<10){
+            minuteString = "0" + minute;
+            return minuteString;
+        } else return Integer.toString(minute);
     }
 
     public String getNote(){

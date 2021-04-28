@@ -10,6 +10,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/** Singleton class to hold list of FeelObj objects */
 public class Singleton {
 
     public static Singleton ourInstance = new Singleton();
@@ -19,15 +20,15 @@ public class Singleton {
     private Singleton() {
         lista = new ArrayList<FeelObj>();
     }
-
+    /** get instance */
     public static Singleton getInstance() {
         return ourInstance;
     }
 
-    public void idk (ArrayList test){
-        this.lista = test;
+    public void cloneList (ArrayList list){
+        this.lista = list;
     }
-
+    /** get list */
     public ArrayList<FeelObj> getList() {
         return lista;
     }

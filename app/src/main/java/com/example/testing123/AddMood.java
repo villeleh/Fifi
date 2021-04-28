@@ -21,7 +21,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.reflect.Type;
-
+/** Creates FeelObj objects to hold information and saves them */
 public class AddMood extends AppCompatActivity {
 
     int rateMood, i;
@@ -32,9 +32,8 @@ public class AddMood extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_mood);
-
-
         Button saveButton = findViewById(R.id.saveButton);
+
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,31 +77,30 @@ public class AddMood extends AppCompatActivity {
                 rateMood = 5;
             }
         });
-
-
-
     }
+
+        /** creates object, adds it to list, saves list */
         public void saveFeel(){
             EditText sleepField = (EditText) findViewById(R.id.sleepField);
-            String sleep = sleepField.getText().toString();
+            String sleep = sleepField.getText().toString(); // assign text from textfield to a string
             EditText editText = (EditText) findViewById(R.id.NoteField);
             String message = editText.getText().toString();
-            Singleton.getInstance().getList().add(new FeelObj(message, rateMood, sleep, out, exercise, chores));
-            Log.d("LOG", Singleton.getInstance().getList().get(i).getNote() + " " + Singleton.getInstance().getList().get(i).getMood());
+            Singleton.getInstance().getList().add(new FeelObj(message, rateMood, sleep, out, exercise, chores)); // create a new object with the given parameters and add it to the list
 
-            SharedPreferences mPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE);
-            SharedPreferences.Editor editor = mPrefs.edit();
+            SharedPreferences mPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creating a variable for storing data in shared preferences
+            SharedPreferences.Editor editor = mPrefs.edit(); // creating a variable for editor to store data in shared preferences.
             Gson gson = new Gson();
-            ArrayList saveList = Singleton.getInstance().getList();
+            ArrayList saveList = Singleton.getInstance().getList(); // creating a copy of the singleton list to save into shared preferences
             String json = gson.toJson(saveList);
-            editor.putString("epic list", json);
+            editor.putString("epic list", json); // save list
             editor.apply();
 
             Intent intent3 = new Intent(this, MainActivity.class);
-            startActivity(intent3);
+            startActivity(intent3); // return to main activity after saving
             i++;
     }
 
+    /** get boolean value from checkboxes */
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();

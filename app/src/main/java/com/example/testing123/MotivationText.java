@@ -3,14 +3,14 @@ package com.example.testing123;
 import java.util.ArrayList;
 import java.util.Random;
 
-
+/** Singleton class to hold list of motivational phrases */
 public class MotivationText {
 
     public static MotivationText motiInstance = new MotivationText();
 
     private ArrayList<String> motiList;
 
-    private MotivationText() {
+    private MotivationText() { // creates a list and adds motivational strings
         motiList = new ArrayList<String>();
         motiList.add("\"On OK olla OK.\"");
         motiList.add("\"Mikään ei jatku ikuisesti.\"");
