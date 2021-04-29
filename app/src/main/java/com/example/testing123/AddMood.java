@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /** Creates FeelObj objects to hold information and saves them */
 public class AddMood extends AppCompatActivity {
 
-    int rateMood, i;
+    private int rateMood, i;
     private RadioButton rad1,rad2,rad3,rad4,rad5;
     private boolean out, exercise, chores;
 

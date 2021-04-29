@@ -2,14 +2,14 @@ package com.example.testing123;
 
 import java.util.Calendar;
 
-/** class for object that holds the information given in the AddMood class  */
+/** Class for object that holds the information given in the AddMood class  */
 public class FeelObj {
-    String note, sleep, ulkoilu, kuntoilu, koti;
-    int rateMood;
-    boolean out, exercise, chores;
-    int minute = Calendar.getInstance().get(Calendar.MINUTE);
-    String minuteString;
-    String currentTime = Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))
+    private String note, sleep, ulkoilu, kuntoilu, koti;
+    private int rateMood;
+    private boolean out, exercise, chores;
+    private int minute = Calendar.getInstance().get(Calendar.MINUTE);
+    private String minuteString;
+    private String currentTime = Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))
                  + "." + Integer.toString((Calendar.getInstance().get(Calendar.MONTH) + 1))
                  + "." + Integer.toString(Calendar.getInstance().get(Calendar.YEAR))
                  + " " + Integer.toString(Calendar.getInstance().get(Calendar.HOUR_OF_DAY))

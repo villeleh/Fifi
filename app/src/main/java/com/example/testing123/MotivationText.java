@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /** Singleton class to hold list of motivational phrases */
 public class MotivationText {
 
-    public static MotivationText motiInstance = new MotivationText();
+    private static MotivationText motiInstance = new MotivationText();
 
     private ArrayList<String> motiList;
 

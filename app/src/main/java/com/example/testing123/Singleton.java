@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /** Singleton class to hold list of FeelObj objects */
 public class Singleton {
 
-    public static Singleton ourInstance = new Singleton();
+    private static Singleton ourInstance = new Singleton();
 
     private ArrayList<FeelObj> lista;
 

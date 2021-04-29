@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Random rng = new Random(Calendar.getInstance().get(Calendar.MILLISECOND)); // create a random number generator
+    private Random rng = new Random(Calendar.getInstance().get(Calendar.MILLISECOND)); // create a random number generator
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
