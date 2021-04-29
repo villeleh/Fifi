@@ -1,7 +1,6 @@
 package com.example.testing123;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /** Singleton class to hold list of motivational phrases */
 public class MotivationText {

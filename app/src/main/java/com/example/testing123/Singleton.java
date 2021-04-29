@@ -1,14 +1,6 @@
 package com.example.testing123;
 
-
-import android.content.SharedPreferences;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 /** Singleton class to hold list of FeelObj objects */
 public class Singleton {

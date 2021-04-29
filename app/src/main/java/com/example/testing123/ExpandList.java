@@ -4,19 +4,19 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 import android.annotation.SuppressLint;
-
 import androidx.appcompat.app.AppCompatActivity;
+
 /** Class for the activity that opens when a list item is clicked */
 public class ExpandList extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obj_desc);
 
         Bundle b = getIntent().getExtras();
         int i = b.getInt(MoodList.EXTRA, 0); // get the index of the list item that was clicked
+
         // put text into text fields
         ((TextView) findViewById(R.id.descText)).setText(Singleton.getInstance().getList().get(i).getNote());
         ((TextView) findViewById(R.id.feelText)).setText(Integer.toString(Singleton.getInstance().getList().get(i).getMood()) + "/5");

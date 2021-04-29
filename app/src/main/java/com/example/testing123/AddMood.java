@@ -3,24 +3,15 @@ package com.example.testing123;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.lang.reflect.Type;
+
 /** Creates FeelObj objects to hold information and saves them */
 public class AddMood extends AppCompatActivity {
 
@@ -113,17 +104,17 @@ public class AddMood extends AppCompatActivity {
                 else
                     out = false;
                 break;
+
             case R.id.checkBox2:
                 if (checked)
                     exercise = true;
-
-            else
+                else
                     exercise = false;
                 break;
+
             case R.id.checkBox3:
                 if (checked)
                     chores = true;
-
                 else
                     chores = false;
                 break;
