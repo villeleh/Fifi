@@ -72,12 +72,13 @@ public class AddMood extends AppCompatActivity {
 
         /** creates object, adds it to list, saves list */
         public void saveFeel(){
+            Singleton.getInstance().reverseList(); // reverse list
             EditText sleepField = (EditText) findViewById(R.id.sleepField);
             String sleep = sleepField.getText().toString(); // assign text from textfield to a string
             EditText editText = (EditText) findViewById(R.id.NoteField);
             String message = editText.getText().toString();
             Singleton.getInstance().getList().add(new FeelObj(message, rateMood, sleep, out, exercise, chores)); // create a new object with the given parameters and add it to the list
-
+            Singleton.getInstance().reverseList();
             SharedPreferences mPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creating a variable for storing data in shared preferences
             SharedPreferences.Editor editor = mPrefs.edit(); // creating a variable for editor to store data in shared preferences.
             Gson gson = new Gson();
@@ -120,5 +121,4 @@ public class AddMood extends AppCompatActivity {
                 break;
         }
     }
-
 }

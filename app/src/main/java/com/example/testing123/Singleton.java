@@ -1,6 +1,7 @@
 package com.example.testing123;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /** Singleton class to hold list of FeelObj objects */
 public class Singleton {
@@ -20,9 +21,12 @@ public class Singleton {
     public void cloneList (ArrayList list){
         this.lista = list;
     }
+    /** reverse list */
+    public void reverseList (){
+        Collections.reverse(this.lista);
+    }
     /** get list */
     public ArrayList<FeelObj> getList() {
         return lista;
     }
-
 }

@@ -12,7 +12,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /** Class to handle ListView */
 public class MoodList extends AppCompatActivity {
@@ -29,8 +28,7 @@ public class MoodList extends AppCompatActivity {
         String json = getPrefs.getString("epic list", null); // get string from shared preferences
         Type type = new TypeToken<ArrayList<FeelObj>>() {}.getType();
         ArrayList<FeelObj> dataList = gson.fromJson(json, type); // load list and make it into a new list
-        if (dataList != null){ // if there is something on the list, reverse it and copy it to the original singleton list
-            Collections.reverse(dataList);
+        if (dataList != null){
             Singleton.getInstance().cloneList(dataList);
         }
 
