@@ -20,6 +20,7 @@ public class MoodList extends AppCompatActivity {
     public static final String EXTRA = "com.example.testing123.MESSAGE";
 
     @Override
+    /** loads list from shared preferences and creates adapter for the list */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mood_list);

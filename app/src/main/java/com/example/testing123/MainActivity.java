@@ -8,11 +8,15 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Random;
 
+/** Handles activity buttons and gets random motivational phrases */
 public class MainActivity extends AppCompatActivity {
 
     private Random rng = new Random(Calendar.getInstance().get(Calendar.MILLISECOND)); // create a random number generator
 
+
+
     @Override
+    /** calls the moti() method */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

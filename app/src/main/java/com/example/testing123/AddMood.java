@@ -20,6 +20,7 @@ public class AddMood extends AppCompatActivity {
     private boolean out, exercise, chores;
 
     @Override
+    /** sets onclick listeners to buttons */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_mood);
