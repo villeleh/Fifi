@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent2);
     }
     /** get a random motivational phrase from the motiList and assign it to a textView */
-    public void moti(){
+    public void moti() {
         int nxt = rng.nextInt(MotivationText.getInstance().getLenght());
         String motiString = MotivationText.getInstance().getList().get(nxt);
         ((TextView) findViewById(R.id.motiView)).setText(motiString);

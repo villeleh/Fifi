@@ -29,4 +29,8 @@ public class Singleton {
     public ArrayList<FeelObj> getList() {
         return lista;
     }
+
+    public void deleteItem(int i){
+        lista.remove(i);
+    }
 }

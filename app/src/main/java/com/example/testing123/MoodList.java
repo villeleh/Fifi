@@ -33,9 +33,10 @@ public class MoodList extends AppCompatActivity {
         }
 
         ListView histList = findViewById(R.id.HistList);
-        ArrayAdapter<FeelObj> adapter1; // make an adapter to show the list
-        adapter1 = new ArrayAdapter<FeelObj>(this, android.R.layout.simple_list_item_1, Singleton.getInstance().getList());
-        histList.setAdapter(adapter1);
+        ArrayAdapter<FeelObj> adapter; // make an adapter to show the list
+        adapter = new ArrayAdapter<FeelObj>(this, android.R.layout.simple_list_item_1, Singleton.getInstance().getList());
+        histList.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         histList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

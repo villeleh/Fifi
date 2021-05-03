@@ -86,9 +86,7 @@ public class AddMood extends AppCompatActivity {
             String json = gson.toJson(saveList);
             editor.putString("epic list", json); // save list
             editor.apply();
-
-            Intent intent3 = new Intent(this, MainActivity.class);
-            startActivity(intent3); // return to main activity after saving
+            finish(); // return to main activity after saving
             i++;
     }
 
