@@ -2,7 +2,11 @@ package com.example.testing123;
 
 import java.util.ArrayList;
 
-/** Singleton class to hold list of motivational phrases */
+/** Singleton class to hold the list of motivational phrases
+ * @author Ville Lehtola
+ * @author Jerry Julenius
+ * @author Mathias Karhu
+ */
 public class MotivationText {
 
     private static MotivationText motiInstance = new MotivationText();
@@ -36,14 +40,17 @@ public class MotivationText {
     }
 
     public static MotivationText getInstance() {
+        /** returns instance */
         return motiInstance;
     }
 
     public ArrayList<String> getList() {
+        /** returns motilist */
         return motiList;
     }
 
     public int getLenght(){
+        /** returns the size of motilist */
         return this.motiList.size();
     }
 }

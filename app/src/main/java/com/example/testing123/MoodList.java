@@ -13,7 +13,11 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-/** Class to handle ListView */
+/** Loads the list from shared preferences and creates an adapter for it
+ * @author Ville Lehtola
+ * @author Jerry Julenius
+ * @author Mathias Karhu
+ */
 public class MoodList extends AppCompatActivity {
 
     public static final String EXTRA = "com.example.testing123.MESSAGE";
@@ -23,17 +27,17 @@ public class MoodList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mood_list);
 
-        SharedPreferences getPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creating a variable for loading data from shared preferences
+        SharedPreferences getPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creates a variable for loading data from shared preferences
         Gson gson = new Gson();
-        String json = getPrefs.getString("epic list", null); // get string from shared preferences
+        String json = getPrefs.getString("epic list", null); // gets string from shared preferences
         Type type = new TypeToken<ArrayList<FeelObj>>() {}.getType();
-        ArrayList<FeelObj> dataList = gson.fromJson(json, type); // load list and make it into a new list
+        ArrayList<FeelObj> dataList = gson.fromJson(json, type); // loads list and make it into a new list
         if (dataList != null){
             Singleton.getInstance().cloneList(dataList);
         }
 
         ListView histList = findViewById(R.id.HistList);
-        ArrayAdapter<FeelObj> adapter; // make an adapter to show the list
+        ArrayAdapter<FeelObj> adapter; // makes an adapter to show the list
         adapter = new ArrayAdapter<FeelObj>(this, android.R.layout.simple_list_item_1, Singleton.getInstance().getList());
         histList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -42,8 +46,8 @@ public class MoodList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent4 = new Intent(MoodList.this, ExpandList.class);
-                intent4.putExtra(EXTRA, i); // send the index of the list item that was clicked
-                startActivity(intent4); // start ExpandList activity
+                intent4.putExtra(EXTRA, i); // sends the index of the list item that was clicked
+                startActivity(intent4); // starts ExpandList activity
             }
         });
     }

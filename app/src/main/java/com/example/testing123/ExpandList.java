@@ -18,7 +18,12 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-/** Class for the activity that opens when a list item is clicked */
+/** Class for the activity that opens when a list item is clicked
+ * @author Ville Lehtola
+ * @author Jerry Julenius
+ * @author Mathias Karhu
+ */
+
 public class ExpandList extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
 
@@ -28,7 +33,7 @@ public class ExpandList extends AppCompatActivity {
         setContentView(R.layout.obj_desc);
 
         Bundle b = getIntent().getExtras();
-        int i = b.getInt(MoodList.EXTRA, 0); // get the index of the list item that was clicked
+        int i = b.getInt(MoodList.EXTRA, 0); /** gets the index of the list item that was clicked */
 
         // put text into text fields
         ((TextView) findViewById(R.id.descText)).setText(Singleton.getInstance().getList().get(i).getNote());
@@ -58,12 +63,12 @@ public class ExpandList extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
                 Singleton.getInstance().deleteItem(i);
-                SharedPreferences mPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creating a variable for storing data in shared preferences
-                SharedPreferences.Editor editor = mPrefs.edit(); // creating a variable for editor to store data in shared preferences.
+                SharedPreferences mPrefs = getSharedPreferences("shared preferences", MODE_PRIVATE); // creates a variable for storing data in shared preferences
+                SharedPreferences.Editor editor = mPrefs.edit(); // creates a variable for editor to store data in shared preferences.
                 Gson gson = new Gson();
-                ArrayList saveList = Singleton.getInstance().getList(); // creating a copy of the singleton list to save into shared preferences
+                ArrayList saveList = Singleton.getInstance().getList(); // creates a copy of the singleton list to save into shared preferences
                 String json = gson.toJson(saveList);
-                editor.putString("epic list", json); // save list
+                editor.putString("epic list", json); // saves list
                 editor.apply();
                 dialog.dismiss();
                 startActivity(goBack);

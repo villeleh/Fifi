@@ -2,7 +2,11 @@ package com.example.testing123;
 
 import java.util.Calendar;
 
-/** Class for object that holds the information given in the AddMood class  */
+/** Class for object that holds the information given in the AddMood class
+ * @author Ville Lehtola
+ * @author Jerry Julenius
+ * @author Mathias Karhu
+ */
 public class FeelObj {
     private String note, sleep, ulkoilu, kuntoilu, koti;
     private int rateMood;
